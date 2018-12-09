@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin()
   ],
-  entry: ['babel-polyfill','./src/main.js'],
+  entry: ['@babel/polyfill','./src/main.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -28,7 +28,8 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-          }
+          },
+          compiler: require('vue-template-compiler')
           // other vue-loader options go here
         }
       },
@@ -72,12 +73,6 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: true,
-    //   compress: {
-    //     warnings: false
-    //   }
-    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
