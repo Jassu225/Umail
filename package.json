@@ -6,11 +6,14 @@
   "license": "GNU GPL",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "dev": "cross-env NODE_ENV=development DEBUG=email-templates webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "email-templates": "^5.0.2",
+    "headset": "^0.3.0",
+    "pug": "^2.0.3",
     "vue": "^2.5.18"
   },
   "browserslist": [
