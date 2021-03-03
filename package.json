@@ -13,7 +13,7 @@
     "@babel/polyfill": "^7.0.0",
     "email-templates": "^5.0.2",
     "headset": "^0.3.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "vue": "^2.5.18"
   },
   "browserslist": [
